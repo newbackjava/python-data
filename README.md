@@ -1,19 +1,6 @@
-좋아요 👍
-아래는 GitHub에서 바로 사용 가능한 **스타일 확장판 README**입니다.
-이 버전은 다음과 같은 기능이 추가되어 있습니다:
-
-* ✅ **자동 목차 (Table of Contents)**
-* 🎨 **색상 강조 및 이모지 시각 보조**
-* 🧭 **폴더별 빠른 이동 링크**
-* 📘 **GitHub 렌더링에 최적화된 코드/표 서식**
-
----
 
 ````markdown
 # 🐍 Python Data Repository — 전체 통합 README
-
-![status](https://img.shields.io/badge/updated-2025--11--11-informational)
-![license](https://img.shields.io/badge/edu-example-blue)
 
 ---
 
