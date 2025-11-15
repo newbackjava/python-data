@@ -18,7 +18,8 @@ data01/scripts/
 | `users.csv` | 1000 | `user_id`, `age`, `gender`, `join_date`, `total_spent` | `U001, 28, M, 2023-01-15, 450000` |
 | `sales.csv` | 5000 | `order_id`, `user_id`, `product_id`, `quantity`, `price`, `order_date` | `ORD001, U001, P101, 2, 25000, 2023-02-10` |
 
----
+<img width="1000" height="13" alt="image" src="https://github.com/user-attachments/assets/bde53837-35c3-447c-8b14-bc67d8254304" />
+
 
 ## data02: 중급 데이터 클리닝과 탐색
 텍스트 처리, 중복 제거, 피벗 테이블 실습.
@@ -39,7 +40,7 @@ data02/scripts/
 | `reviews.csv` | 3000 | `review_id`, `product_id`, `rating`, `comment`, `review_date` | `R001, P101, 4, "배송 빠르고 좋아요!", 2023-03-05` |
 | `campaigns.csv` | 1500 | `campaign_id`, `sent_date`, `open_rate`, `click_rate`, `conversion` | `CAMP01, 2023-04-01, 42.3, 15.7, Y` |
 
----
+<img width="1000" height="13" alt="image" src="https://github.com/user-attachments/assets/bde53837-35c3-447c-8b14-bc67d8254304" />
 
 ## data03: 시계열 분석 입문
 날짜 처리, 이동평균, 계절성 분석.
@@ -60,7 +61,7 @@ data03/scripts/
 | `daily_sales.csv` | 365 | `date`, `sales`, `holiday` | `2023-01-01, 120000, True` |
 | `weather.csv` | 365 | `date`, `temp`, `rainfall_mm` | `2023-01-01, 5.2, 0.0` |
 
----
+<img width="1000" height="13" alt="image" src="https://github.com/user-attachments/assets/bde53837-35c3-447c-8b14-bc67d8254304" />
 
 ## data04: 소셜 미디어 분석
 해시태그, 참여도, 네트워크 분석 기초.
@@ -75,7 +76,7 @@ data04/scripts/
 └── engagement_rate.py    # 참여율 계산, 상위 포스트 추출
 ```
 
----
+<img width="1000" height="13" alt="image" src="https://github.com/user-attachments/assets/bde53837-35c3-447c-8b14-bc67d8254304" />
 
 ## data05: 재무 데이터 분석
 재무비율, 주식 가격, 이동평균.
@@ -90,7 +91,7 @@ data05/scripts/
 └── technical.py          # SMA, EMA, 볼린저 밴드
 ```
 
----
+<img width="1000" height="13" alt="image" src="https://github.com/user-attachments/assets/bde53837-35c3-447c-8b14-bc67d8254304" />
 
 ## data06: 의료 데이터 분석
 환자 기록, 생존 분석, 바이탈 사인.
@@ -105,7 +106,7 @@ data06/scripts/
 └── risk_model.py         # 로지스틱 회귀로 재입원 예측
 ```
 
----
+<img width="1000" height="13" alt="image" src="https://github.com/user-attachments/assets/bde53837-35c3-447c-8b14-bc67d8254304" />
 
 ## data07: 추천 시스템 기초
 협업 필터링, 사용자 기반 추천.
@@ -120,7 +121,7 @@ data07/scripts/
 └── evaluate.py           # RMSE, Precision@K 계산
 ```
 
----
+<img width="1000" height="13" alt="image" src="https://github.com/user-attachments/assets/bde53837-35c3-447c-8b14-bc67d8254304" />
 
 ## data08: 자연어 처리 (NLP) 입문
 텍스트 전처리, 감성 분석, 토픽 모델링.
@@ -142,7 +143,7 @@ data08/scripts/
 | `product_reviews.csv` | 10000 | `review_id`, `text`, `sentiment` | `R1001, "정말 좋아요! 강력 추천", 긍정` |
 | `news_articles.csv` | 5000 | `article_id`, `title`, `content`, `category` | `N001, "AI 시장 급성장", "...", 경제` |
 
----
+<img width="1000" height="13" alt="image" src="https://github.com/user-attachments/assets/bde53837-35c3-447c-8b14-bc67d8254304" />
 
 ## data09: 이미지 처리 및 컴퓨터 비전
 이미지 리사이징, 필터링, 간단한 CNN.
@@ -160,7 +161,7 @@ data09/scripts/
 └── gradcam.py            # Grad-CAM으로 해석 가능성 시각화
 ```
 
----
+<img width="1000" height="13" alt="image" src="https://github.com/user-attachments/assets/bde53837-35c3-447c-8b14-bc67d8254304" />
 
 ## data10: 네트워크 분석
 소셜 그래프, 중심성, 커뮤니티 탐지.
@@ -175,7 +176,7 @@ data10/scripts/
 └── community.py          # Louvain 알고리즘 (community-louvain)
 ```
 
----
+<img width="1000" height="13" alt="image" src="https://github.com/user-attachments/assets/bde53837-35c3-447c-8b14-bc67d8254304" />
 
 ## data11: 빅데이터 처리 기초
 Dask로 대용량 CSV 처리, 병렬 연산.
@@ -190,7 +191,7 @@ data11/scripts/
 └── memory_profile.py     # 메모리 사용량 비교 (Pandas vs Dask)
 ```
 
----
+<img width="1000" height="13" alt="image" src="https://github.com/user-attachments/assets/bde53837-35c3-447c-8b14-bc67d8254304" />
 
 ## data12: A/B 테스트 및 통계 검정
 가설 검정, p-value, 효과 크기.
@@ -206,7 +207,7 @@ data12/scripts/
 └── bayesian_ab.py        # 베이지안 A/B 테스트 (PyMC)
 ```
 
----
+<img width="1000" height="13" alt="image" src="https://github.com/user-attachments/assets/bde53837-35c3-447c-8b14-bc67d8254304" />
 
 ## data13: 시뮬레이션 및 몬테카를로
 리스크 분석, 확률 모델링.
@@ -220,7 +221,7 @@ data13/scripts/
 └── risk_dashboard.py     # 손실 분포 히스토그램, VaR 계산
 ```
 
----
+<img width="1000" height="13" alt="image" src="https://github.com/user-attachments/assets/bde53837-35c3-447c-8b14-bc67d8254304" />
 
 ## data14: API 데이터 수집 및 ETL
 공공 API 호출, JSON 파싱, DB 저장.
@@ -236,7 +237,7 @@ data14/scripts/
 └── load.py               # SQLite INSERT
 ```
 
----
+<img width="1000" height="13" alt="image" src="https://github.com/user-attachments/assets/bde53837-35c3-447c-8b14-bc67d8254304" />
 
 ## data15: 인터랙티브 대시보드
 Dash/Streamlit으로 실시간 시각화.
@@ -250,7 +251,7 @@ data15/scripts/
 └── app_streamlit.py      # Streamlit 대시보드 (슬라이더, 캐싱)
 ```
 
----
+<img width="1000" height="13" alt="image" src="https://github.com/user-attachments/assets/bde53837-35c3-447c-8b14-bc67d8254304" />
 
 ## data16: 이상 탐지 (Anomaly Detection)
 비지도 학습으로 이상치 탐지.
@@ -265,7 +266,7 @@ data16/scripts/
 └── alert_system.py       # 실시간 이상 알림 로직
 ```
 
----
+<img width="1000" height="13" alt="image" src="https://github.com/user-attachments/assets/bde53837-35c3-447c-8b14-bc67d8254304" />
 
 ## data17: 강화학습 기초
 Q-Learning, 환경 설계.
@@ -280,7 +281,7 @@ data17/scripts/
 └── policy_viz.py         # 최적 정책 시각화
 ```
 
----
+<img width="1000" height="13" alt="image" src="https://github.com/user-attachments/assets/bde53837-35c3-447c-8b14-bc67d8254304" />
 
 ## data18: 멀티모달 데이터 분석
 텍스트 + 이미지 결합 분석.
@@ -295,7 +296,7 @@ data18/scripts/
 └── similarity_search.py  # "고양이 사진" 검색
 ```
 
----
+<img width="1000" height="13" alt="image" src="https://github.com/user-attachments/assets/bde53837-35c3-447c-8b14-bc67d8254304" />
 
 ## data19: AI 윤리 및 공정성
 바이어스 탐지, 공정성 지표.
@@ -309,7 +310,7 @@ data19/scripts/
 └── fair_ml.py            # AIF360으로 공정성 개선
 ```
 
----
+<img width="1000" height="13" alt="image" src="https://github.com/user-attachments/assets/bde53837-35c3-447c-8b14-bc67d8254304" />
 
 ## data20: MLOps 및 모델 배포
 Docker, MLflow, FastAPI.
@@ -324,7 +325,7 @@ data20/scripts/
 └── Dockerfile            # 컨테이너화
 ```
 
----
+<img width="1000" height="13" alt="image" src="https://github.com/user-attachments/assets/bde53837-35c3-447c-8b14-bc67d8254304" />
 
 ## data21: 종합 프로젝트 (E2E 파이프라인)
 데이터 수집 → 전처리 → 모델 → 배포.
