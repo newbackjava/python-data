@@ -1,36 +1,63 @@
+# Data05 - Python 데이터 분석 실습 자료
 
-# Python 데이터 분석 프로젝트 - data05
+이 저장소는 **Python 데이터 분석 실습**을 위한 샘플 데이터셋과 예제 스크립트를 제공한다.  
+`data05` 디렉토리 안 데이터는 교육·학습용으로 구성했다.
 
-## 개요
-`data05` 디렉토리는 최신 데이터 분석 기법과 머신러닝 알고리즘을 적용하여 다양한 데이터셋을 분석하는 프로젝트 자료를 포함하고 있다. 이 디렉토리는 실습을 통해 데이터 처리, 모델링, 시각화 기술을 향상시키는 데 중점을 두고 있다.
+---
 
 ## 디렉토리 구조
 
 ```
 data05/
-│
-├── data/
-│   ├── dataset9.csv
-│   ├── dataset10.csv
-│   └── ...
-│
-├── scripts/
-│   ├── model_evaluation.py
-│   ├── time_series_analysis.py
-│   └── data_preprocessing.py
-│
-└── README.md
+├── sales_data.csv          # 가상 쇼핑몰 매출 데이터 (2022년)
+├── customer_info.xlsx      # 고객 정보 (이름, 나이, 지역, 가입일)
+├── product_catalog.json    # 상품 카탈로그 (상품ID, 이름, 카테고리, 가격)
+├── survey_responses.csv    # 고객 만족도 설문 응답 데이터
+├── images/
+│   ├── chart_example.png   # 예제 시각화 이미지
+│   └── dashboard_mockup.jpg
+└── scripts/
+    ├── data_cleaning.py    # 데이터 전처리 예제
+    ├── analysis.ipynb      # Jupyter Notebook 분석 예제
+    └── visualization.py    # Matplotlib/Seaborn 시각화 스크립트
 ```
 
-### 설명
+---
 
-1. **data/**
-   - 이 디렉토리는 데이터 분석에 사용되는 여러 데이터셋을 포함하고 있다. 각 데이터셋은 특정 분석 목적에 맞추어 설계되었다.
-   - 예: `dataset9.csv`, `dataset10.csv` 등은 다양한 형식의 데이터를 포함하여 실습에 활용된다.
+## 데이터 설명
 
-2. **scripts/**
-   - 이 디렉토리는 데이터 분석을 위한 고급 스크립트를 포함하고 있다. 각 스크립트는 데이터 정제, 분석, 머신러닝 모델링 및 시각화를 위한 다양한 기법을 적용한다.
-   - **model_evaluation.py**: 모델의 성능을 평가하고 최적화하는 작업을 수행하는 스크립트이다.
-   - **time_series_analysis.py**: 시계열 데이터 분석을 위한 기법을 적용하여 예측 모델을 구축한다.
-   - **data_preprocessing.py**: 데이터를 정제하고 변환하여 분석할 준비를 하는 작업을 수행한다.
+| 파일명 | 형식 | 설명 | 주요 컬럼 |
+|--------|------|------|----------|
+| `sales_data.csv` | CSV | 2022년 가상 쇼핑몰 일별 매출 | `date`, `product_id`, `quantity`, `revenue`, `customer_id` |
+| `customer_info.xlsx` | Excel | 고객 기본 정보 | `customer_id`, `name`, `age`, `region`, `join_date` |
+| `product_catalog.json` | JSON | 상품 정보 | `product_id`, `name`, `category`, `price`, `stock` |
+| `survey_responses.csv` | CSV | 고객 만족도 설문 | `customer_id`, `q1 ~ q5`, `comment`, `timestamp` |
+
+---
+
+## 시작하기
+
+### 1. 저장소 클론
+```bash
+git clone https://github.com/newbackjava/python-data.git
+cd python-data/data05
+```
+
+### 2. 필요 패키지 설치
+```bash
+pip install pandas matplotlib seaborn openpyxl jupyter
+```
+
+### 3. 예제 노트북 실행
+```bash
+jupyter notebook scripts/analysis.ipynb
+```
+
+---
+
+## 활용 예시
+
+- **매출 추이 분석** → `sales_data.csv` + `visualization.py`
+- **고객 세그먼트 분석** → `customer_info.xlsx` + `sales_data.csv` 조인
+- **NPS 계산 및 시각화** → `survey_responses.csv`
 
