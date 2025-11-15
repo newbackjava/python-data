@@ -1,37 +1,67 @@
-# Python 데이터 분석 프로젝트 - data02
+# Data02 - Python 데이터 분석 실습 자료
 
-## 개요
-`data02` 디렉토리는 추가적인 데이터셋과 분석 스크립트를 포함하고 있으며, 이전 디렉토리인 `data01`에서 확장된 데이터 분석 프로젝트다. 이 디렉토리는 데이터 분석의 다양한 기법을 실습할 수 있는 자료를 제공한다.
+이 저장소는 **Python 데이터 분석 실습**을 위한 샘플 데이터셋과 예제 스크립트를 제공한다.  
+`data02` 디렉토리 안 데이터는 교육·학습용으로 구성했다.
+
+---
 
 ## 디렉토리 구조
 
 ```
 data02/
-│
-├── data/
-│   ├── dataset3.csv
-│   ├── dataset4.csv
-│   └── ...
-│
-├── scripts/
-│   ├── advanced_data_cleaning.py
-│   ├── advanced_data_analysis.py
-│   └── advanced_data_visualization.py
-│
-└── README.md
+├── sales_data.csv          # 가상 쇼핑몰 매출 데이터 (2019년)
+├── customer_info.xlsx      # 고객 정보 (이름, 나이, 지역, 가입일)
+├── product_catalog.json    # 상품 카탈로그 (상품ID, 이름, 카테고리, 가격)
+├── survey_responses.csv    # 고객 만족도 설문 응답 데이터
+├── images/
+│   ├── chart_example.png   # 예제 시각화 이미지
+│   └── dashboard_mockup.jpg
+└── scripts/
+    ├── data_cleaning.py    # 데이터 전처리 예제
+    ├── analysis.ipynb      # Jupyter Notebook 분석 예제
+    └── visualization.py    # Matplotlib/Seaborn 시각화 스크립트
 ```
 
-### 설명
+---
 
-1. **data/**
-   - 이 디렉토리는 데이터 분석에 사용되는 여러 데이터셋을 포함한다. 각 데이터셋은 특정 분석 목적에 맞추어 설계되었다.
-   - 예: `dataset3.csv`, `dataset4.csv` 등은 다양한 형식의 데이터를 포함하여 실습에 활용된다.
+## 데이터 설명
 
-2. **scripts/**
-   - 이 디렉토리는 데이터 분석을 위한 고급 스크립트를 포함하고 있다. 각 스크립트는 데이터 정제, 분석, 시각화를 위한 다양한 기법을 적용한다.
-   - **advanced_data_cleaning.py**: 데이터 정제 작업을 수행하는 스크립트로, 더 복잡한 데이터 처리 기술을 다룬다.
-   - **advanced_data_analysis.py**: 통계적 모델링 및 머신러닝 기법을 포함하여 데이터 분석을 수행한다.
-   - **advanced_data_visualization.py**: 향상된 시각화 기법을 사용하여 데이터의 인사이트를 시각적으로 표현한다.
+| 파일명 | 형식 | 설명 | 주요 컬럼 |
+|--------|------|------|----------|
+| `sales_data.csv` | CSV | 2019년 가상 쇼핑몰 일별 매출 | `date`, `product_id`, `quantity`, `revenue`, `customer_id` |
+| `customer_info.xlsx` | Excel | 고객 기본 정보 | `customer_id`, `name`, `age`, `region`, `join_date` |
+| `product_catalog.json` | JSON | 상품 정보 | `product_id`, `name`, `category`, `price`, `stock` |
+| `survey_responses.csv` | CSV | 고객 만족도 설문 | `customer_id`, `q1 ~ q5`, `comment`, `timestamp` |
+
+---
+
+## 시작하기
+
+### 1. 저장소 클론
+```bash
+git clone https://github.com/newbackjava/python-data.git
+cd python-data/data02
+```
+
+### 2. 필요 패키지 설치
+```bash
+pip install pandas matplotlib seaborn openpyxl jupyter
+```
+
+### 3. 예제 노트북 실행
+```bash
+jupyter notebook scripts/analysis.ipynb
+```
+
+---
+
+## 활용 예시
+
+- **매출 추이 분석** → `sales_data.csv` + `visualization.py`
+- **고객 세그먼트 분석** → `customer_info.xlsx` + `sales_data.csv` 조인
+- **NPS 계산 및 시각화** → `survey_responses.csv`
+```
+
 
 
 
