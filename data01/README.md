@@ -1,8 +1,4 @@
 
-# Data01 - Python 데이터 분석 실습 자료
-
----
-
 # Data01 - Python 웹 크롤링 & 데이터 수집 실습
 
 `data01` 폴더는 **Python을 이용한 웹 크롤링·데이터 수집 연습용 Jupyter Notebook** 모음이다.  
