@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>KOBIS axios 예제</title>
+
+    <!-- axios CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+<body>
+    <button id="b1">불러오기</button>
+
+    <script type="text/javascript">
+        // DOM이 모두 로딩된 뒤 실행
+        document.addEventListener('DOMContentLoaded', function () {
+
+            document.getElementById('b1').addEventListener('click', function () {
+
+                axios.get(
+                    "https://www.kobis.or.kr/kobisopenapi/webservice/rest/boxoffice/searchDailyBoxOfficeList.json",
+                    {
+                        params: {
+                            key: "6d67fa164c41539d5695302942e640be",
+                            targetDt: "20230722"
+                        }
+                    }
+                )
+                .then(function (response) {
+                    // response.data 가 원래 json 객체
+                    const json = response.data;
+                    console.log(json);
+
+                    const first = json.boxOfficeResult.dailyBoxOfficeList[0];
+
+                    let movieNm = first.movieNm;
+                    let scrnCnt = first.scrnCnt;
+                    let openDt  = first.openDt;
+
+                    alert(movieNm + " " + scrnCnt + " " + openDt);
+                })
+                .catch(function (error) {
+                    console.error(error);
+                    alert("오류");
+                });
+
+            });
+
+        });
+    </script>
+</body>
+</html>

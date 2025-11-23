@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>일별 박스오피스 (axios)</title>
+
+    <!-- axios CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+    <style>
+        body {
+            background-color: pink;   /* 화면 핑크색 배경 */
+            font-family: "맑은 고딕", "Malgun Gothic", sans-serif;
+        }
+        #result {
+            margin-top: 10px;
+            white-space: pre-line;   /* \n 줄바꿈 그대로 표시 */
+        }
+        button {
+            margin-right: 6px;
+        }
+    </style>
+</head>
+<body>
+    <h3>일별 박스오피스</h3>
+    <button id="b1">불러오기</button>
+    <button id="downloadCsv">CSV 저장</button>
+
+    <!-- 여기 안에 영화 목록 출력 -->
+    <div id="result"></div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+
+            const btn        = document.getElementById('b1');
+            const csvBtn     = document.getElementById('downloadCsv');
+            const result     = document.getElementById('result');
+
+            // 불러온 데이터를 CSV로 만들기 위해 전역 변수에 보관
+            let csvText = "";   // "순위,영화명,관객수,개봉일\n" 형태로 저장
+
+            btn.addEventListener('click', function () {
+
+                axios.get(
+                    "https://www.kobis.or.kr/kobisopenapi/webservice/rest/boxoffice/searchDailyBoxOfficeList.json",
+                    {
+                        params: {
+                            key: "6d67fa164c41539d5695302942e640be",
+                            targetDt: "20230722"
+                        }
+                    }
+                )
+                .then(function (response) {
+                    const json  = response.data;
+                    const list  = json.boxOfficeResult.dailyBoxOfficeList;
+
+                    console.log(json);   // 콘솔 확인용
+
+                    // 1) 결과 영역 초기화
+                    let output = "";
+
+                    // 2) CSV 헤더 준비
+                    //   - 엑셀에서 한글 안깨지도록 앞에 BOM(\uFEFF) 추가
+                    csvText = '\uFEFF' + "rank,movieNm,audiCnt,openDt\n";
+
+                    // 3) 리스트를 돌면서 화면 문자열 + CSV 문자열 만들기
+                    for (let i = 0; i < list.length; i++) {
+                        const item = list[i];
+
+                        const rank    = item.rank;      // 순위
+                        const movieNm = item.movieNm;   // 영화 제목
+                        const audiCnt = item.audiCnt;   // 해당일 관객수
+                        const openDt  = item.openDt;    // 개봉일
+
+                        // 화면 출력용 (브라우저에 보이는 부분)
+                        output += `${movieNm} ${audiCnt} ${openDt}\n`;
+
+                        // CSV용 한 줄
+                        // 영화 제목 안에 " 가 들어갈 수 있으므로 "" 로 이스케이프
+                        const safeMovieNm = movieNm.replace(/"/g, '""');
+                        csvText += `${rank},"${safeMovieNm}",${audiCnt},${openDt}\n`;
+                    }
+
+                    // 4) 문자열을 브라우저에 출력
+                    result.textContent = output;
+                })
+                .catch(function (error) {
+                    console.error(error);
+                    alert("오류");
+                });
+
+            });
+
+            // CSV 저장 버튼 눌렀을 때 동작
+            csvBtn.addEventListener('click', function () {
+                if (!csvText) {
+                    alert("먼저 '불러오기' 버튼을 눌러 데이터를 가져오세요.");
+                    return;
+                }
+
+                // 1) CSV 텍스트로 Blob 생성
+                const blob = new Blob([csvText], {
+                    type: "text/csv;charset=utf-8;"
+                });
+
+                // 2) Blob을 가리키는 임시 URL 생성
+                const url = URL.createObjectURL(blob);
+
+                // 3) a 태그를 만들어서 강제로 다운로드 트리거
+                const a = document.createElement('a');
+                a.href = url;
+                a.download = "boxoffice_20230722.csv";   // 저장될 파일 이름
+                document.body.appendChild(a);
+                a.click();
+
+                // 4) 사용 후 정리
+                document.body.removeChild(a);
+                URL.revokeObjectURL(url);
+            });
+
+        });
+    </script>
+</body>
+</html>
