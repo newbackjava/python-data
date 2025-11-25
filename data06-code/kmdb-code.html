@@ -1,0 +1,22 @@
+<!DOCTYPE html><html lang="en"><head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+   <script>
+       /* Javascript 샘플 코드 */
+       var xhr = new XMLHttpRequest();
+       var url = 'http://api.koreafilm.or.kr/openapi-data2/wisenut/search_api/search_json2.jsp?collection=kmdb_new2&nation=대한민국'; /*URL*/
+       var queryParams = '?' + encodeURIComponent( 'ServiceKey=R71XD4VMIF4UV7I452XI'); /*Service Key*/
+       queryParams += '&' + encodeURIComponent( 'val001' ) + '=' + encodeURIComponent( '2025' ); /*상영년도*/
+       queryParams += '&' + encodeURIComponent( 'val002' ) + '=' + encodeURIComponent( '11' ); /*상영월*/
+       xhr.open( 'GET', url + queryParams );
+       xhr.onreadystatechange = function () {
+           if ( this.readyState == 4 ) {
+               alert( 'Status: ' + this.status + 'Headers: ' + JSON.stringify( this.getAllResponseHeaders() ) + 'Body: ' + this.responseText );
+            }
+           };
+
+       xhr.send( '' );
+   </script>
+</head><body></body></html>
+

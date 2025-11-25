@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- axios CDN -->
+   <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+<body>
+    <button id="b1" style="background: lime;">일별 박스오피스</button>
+    <!-- 영화 목록 출력될 부분.. -->
+    <div id="result" style="background: yellow;"></div>
+    <script>
+        b1_tag = document.getElementById("b1")
+        //<button id="b1" style="background: lime;">일별 박스오피스</button> 
+        //b1_tag.addEventListener('click', '처리하는 함수') 
+        //함수는 따로 만들어서 함수이름으로 호출할 수 있고,
+        //      한번만 쓰는 경우에는 이름없는 함수를 바로 안에다 넣어줄 수 있고.!!
+        //      이벤트처리하는 경우는 이름없는 함수(익명함수)를 더 많이 씀.
+        b1_tag.addEventListener('click', function (){
+            //클릭이벤트가 발생하면 처리할 내용을 여기에 넣자.
+            //alert("눌러졌구나.!!!")
+            console.log("눌러졌구나.!!!")
+            //axios.get(주소, params : {}).then(성공하고 나서 처리할 함수)
+            //아무때나 원할 때 http 통신을 할 수 있는 객체
+            //요청하는 부분 : axios.get(주소, params : {})
+            //응답받고 나서 처리되는 부분 : .then(성공하고 나서 처리할 함수)
+            //then(익명함수) 형태를 많이 씀.
+
+            axios.get("http://www.kobis.or.kr/kobisopenapi/webservice/rest/boxoffice/searchDailyBoxOfficeList.json", 
+                        {params : {
+                            "key" : "6d67fa164c41539d5695302942e640be",
+                            "targetDt" : "20251124"
+                        }})
+                .then((res) => {
+                    console.log("kobis 연결 성공!!!!!")
+                    console.log(res.data)
+                    let json = res.data
+
+                    let output = "" //모든 영화 목록 누적용 
+                    //for (시작값; 조건식; 증감식)
+                    for (let i = 0; i < 10; i++){
+                        let first = json.boxOfficeResult.dailyBoxOfficeList[i]
+                        //console.log('first >> ' + first) 
+                        /*
+                        console.log(first.rank)
+                        console.log(first.movieNm)
+                        console.log(first.openDt)
+                        console.log(first.audiAcc)
+                        console.log(first.salesAcc)
+                        console.log('-------------------') 
+                        */
+                        let rank = first.rank
+                        let movieNm = first.movieNm
+                        let openDt = first.openDt
+                        let audiAcc = first.audiAcc
+                        let salesAcc = first.salesAcc
+
+                        let one = rank + " " + movieNm + " " + openDt + " " + audiAcc + " " + salesAcc + "<br>"
+                        console.log(one)
+                        console.log("-----------------------------------")
+                        //result.textContent = "ok"
+                        output += one
+                    } //for
+                    result.innerHTML = output
+                }) //axios
+        }) //script
+    </script>
+
+</body>
+</html>
