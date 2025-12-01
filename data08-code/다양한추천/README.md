@@ -17,7 +17,6 @@
 
 ## 2. 폴더 구조 및 관련 파일(예시)
 
-> README는 이 이미지들을 `![...](images/...)` 형식으로 삽입해 두었습니다.
 
 ---
 
@@ -94,9 +93,8 @@ flowchart LR
 
 그리고 README 상단에는 전체 구조를 요약한 이미지를 하나 둘 수 있습니다.
 
-```markdown
-![추천 시스템 전체 구조 예시](images/recsys_overview.png)
-```
+<img width="1200" height="800" alt="recsys_overview" src="https://github.com/user-attachments/assets/071cd491-17f1-476d-a693-640467e21a7d" />
+
 
 이 그림/이미지에서 중요한 포인트는:
 
@@ -170,9 +168,8 @@ flowchart LR
 
 ### 5.2. 개념 그림(이미지 예시)
 
-```markdown
-![연관 규칙 개념도](images/association_rules.png)
-```
+<img width="1200" height="800" alt="association_rules" src="https://github.com/user-attachments/assets/0250aadc-ce50-4d73-aed1-5bce15634706" />
+
 
 이미지 내용 예:
 
@@ -261,9 +258,8 @@ flowchart LR
 
 ### 6.3. 코사인 유사도 개념 그림
 
-```markdown
-![벡터 공간과 코사인 유사도](images/vector_space_similarity.png)
-```
+<img width="1200" height="800" alt="vector_space_similarity" src="https://github.com/user-attachments/assets/7df4ca23-e2c3-4ee1-b125-b6cb5dd3a36d" />
+
 
 이미지 내용 예:
 
@@ -334,9 +330,8 @@ model2.wv.most_similar('너는')
 
 ### 7.4. 단어 임베딩 시각화 이미지 예시
 
-```markdown
-![Word2Vec 임베딩 시각화 예시](images/word2vec_embedding.png)
-```
+<img width="1200" height="800" alt="word2vec_embedding" src="https://github.com/user-attachments/assets/2076fc2f-6986-4bc8-b8a6-1b0a8a68052f" />
+
 
 이미지 내용 예:
 
@@ -424,9 +419,5 @@ model2.wv.most_similar('너는')
 
 ---
 
-> 이 README는 `다양한추천알고리즘-수업중생성.ipynb`를 설명하기 위한 예시 문서로,
-> 필요에 따라 셀 번호, 캡처 이미지, 실제 데이터셋 설명 등을 추가로 보완하면
-> 수업/프로젝트용 공식 문서로 바로 활용할 수 있습니다.
 
-```
 
