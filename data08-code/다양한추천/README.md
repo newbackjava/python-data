@@ -74,8 +74,7 @@ pip install gensim
 
 
 
-```mermaid
-flowchart LR
+```
     A[사용자 행동 데이터] --> B1[장바구니(거래) 데이터]
     A --> B2[텍스트(문장, 리뷰) 데이터]
 
@@ -93,7 +92,8 @@ flowchart LR
 
 그리고 README 상단에는 전체 구조를 요약한 이미지를 하나 둘 수 있습니다.
 
-<img width="1200" height="800" alt="recsys_overview" src="https://github.com/user-attachments/assets/071cd491-17f1-476d-a693-640467e21a7d" />
+<img width="1400" height="900" alt="recsys_overview" src="https://github.com/user-attachments/assets/a6b707bc-e750-48d5-8d53-b4ec07966d0b" />
+
 
 
 이 그림/이미지에서 중요한 포인트는:
@@ -168,7 +168,8 @@ flowchart LR
 
 ### 5.2. 개념 그림(이미지 예시)
 
-<img width="1200" height="800" alt="association_rules" src="https://github.com/user-attachments/assets/0250aadc-ce50-4d73-aed1-5bce15634706" />
+<img width="1400" height="900" alt="association_rules" src="https://github.com/user-attachments/assets/e62894d1-cd9b-42aa-a34a-0a665468fd57" />
+
 
 
 이미지 내용 예:
@@ -258,7 +259,9 @@ flowchart LR
 
 ### 6.3. 코사인 유사도 개념 그림
 
-<img width="1200" height="800" alt="vector_space_similarity" src="https://github.com/user-attachments/assets/7df4ca23-e2c3-4ee1-b125-b6cb5dd3a36d" />
+<img width="1400" height="900" alt="word2vec_embedding (4)" src="https://github.com/user-attachments/assets/7db5c598-c766-4af2-b140-41680550a606" />
+
+
 
 
 이미지 내용 예:
@@ -330,7 +333,8 @@ model2.wv.most_similar('너는')
 
 ### 7.4. 단어 임베딩 시각화 이미지 예시
 
-<img width="1200" height="800" alt="word2vec_embedding" src="https://github.com/user-attachments/assets/2076fc2f-6986-4bc8-b8a6-1b0a8a68052f" />
+<img width="1400" height="900" alt="word2vec_embedding" src="https://github.com/user-attachments/assets/57ed1ae5-6dbf-4107-8988-71ef85324bfd" />
+
 
 
 이미지 내용 예:
